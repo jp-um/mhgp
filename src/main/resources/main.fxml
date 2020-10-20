@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+
+<GridPane fx:controller="com.bitsilla.controller.MainController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+    <gridLinesVisible>true</gridLinesVisible>
+
+    <Text text="Search location"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+
+    <Label text="Chromosome:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <ComboBox fx:id="chromoCombo" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Select Chromosome">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="1"/>
+                <String fx:value="2"/>
+                <String fx:value="3"/>
+                <String fx:value="4"/>
+                <String fx:value="5"/>
+                <String fx:value="6"/>
+                <String fx:value="7"/>
+                <String fx:value="8"/>
+                <String fx:value="9"/>
+                <String fx:value="10"/>
+                <String fx:value="11"/>
+                <String fx:value="12"/>
+                <String fx:value="13"/>
+                <String fx:value="14"/>
+                <String fx:value="15"/>
+                <String fx:value="16"/>
+                <String fx:value="17"/>
+                <String fx:value="18"/>
+                <String fx:value="19"/>
+                <String fx:value="20"/>
+                <String fx:value="21"/>
+                <String fx:value="22"/>
+                <String fx:value="X"/>
+                <String fx:value="Y"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+
+    <Label text="Start Base Position:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <TextField fx:id="startPosField"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="End Base Position:"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+    <TextField fx:id="endPosField"
+               GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <HBox spacing="10" alignment="bottom_right"
+          GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button text="Search"
+                onAction="#handleSearchButtonAction"/>
+    </HBox>
+
+
+</GridPane>
